@@ -1,0 +1,16 @@
+# Dependencies
+node_modules/
+dist/
+
+# Secrets — never commit
+.env
+.env.local
+.env.*.local
+src/Server/.env
+
+# Build info
+*.tsbuildinfo
+
+# OS
+.DS_Store
+Thumbs.db

@@ -1,0 +1,89 @@
+@import "tailwindcss";
+
+@layer base {
+  html {
+    font-size: 16px;
+  }
+
+  html,
+  body {
+    font-family: "Inter Tight", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-weight: 500;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Hide default cursor on desktop — custom cursor used on all pages */
+  @media (pointer: fine) and (min-width: 1024px) {
+    html,
+    body,
+    a,
+    button,
+    [role="button"] {
+      cursor: none !important;
+    }
+  }
+}
+
+/* Clean dual-tone cursor — visible on light and dark */
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 28px;
+  height: 28px;
+  pointer-events: none;
+  opacity: 0;
+  transform: translate3d(-100px, -100px, 0) translate(-50%, -50%);
+  will-change: transform, opacity;
+  transition: opacity 0.15s ease;
+  display: none;
+}
+
+@media (pointer: fine) and (min-width: 1024px) {
+  .custom-cursor {
+    display: block;
+  }
+}
+
+.custom-cursor__ring {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 1.5px solid #fff;
+  box-shadow:
+    0 0 0 1px #000,
+    inset 0 0 0 1px #000;
+  background: transparent;
+}
+
+.custom-cursor__dot {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 4px;
+  height: 4px;
+  margin: -2px 0 0 -2px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 0 0 1px #000;
+}
+
+.bp-card {
+  will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bp-card {
+    will-change: auto;
+  }
+
+  .custom-cursor {
+    transition: none;
+  }
+}
