@@ -12,9 +12,20 @@
     line-height: 1.5;
     margin: 0;
     padding: 0;
+    width: 100%;
+    max-width: 100vw;
+    min-height: 100dvh;
     background-color: #ffffff;
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
+  }
+  
+  #root {
+    width: 100%;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
   }
 
   /* Hide default cursor on desktop — custom cursor used on all pages */
