@@ -7,7 +7,7 @@ const About = () => {
     <div className="about-page">
       <header className="about-header">
         <NavLink to="/" className="about-brand">
-          PRMPT ARCHIVE
+          ARABESQUE
         </NavLink>
         <nav className="about-nav">
           <NavLink to="/">Home</NavLink>
@@ -17,9 +17,9 @@ const About = () => {
       </header>
 
       <main className="about-content">
-        <h1>PRMPT ARCHIVE</h1>
+        <h1>ARABESQUE</h1>
         <p>
-          PRMPT ARCHIVE is an archival streetwear and utility menswear label
+          ARABESQUE is an archival streetwear and utility menswear label
           defined by heavy-weight textiles, utilitarian cuts, and clean
           geometric paneling. Designed around a palette of washed charcoals,
           olive drabs, and deep slate tones, the brand blends industrial design

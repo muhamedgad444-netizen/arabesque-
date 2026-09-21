@@ -82,7 +82,7 @@ export const OutroOverlay: React.FC = () => {
 
           {/* Collection Label */}
           <h2 className="w-full font-['Inter_Tight'] font-medium text-[20px] lg:text-[30px] leading-none text-center tracking-[-0.04em] uppercase text-white whitespace-pre-line">
-            ARCHIVE COLLECTION{'\n'}"PROMPT"
+            ARCHIVE COLLECTION{'\n'}"ARABESQUE"
           </h2>
         </div>
 
@@ -126,7 +126,7 @@ export const OutroOverlay: React.FC = () => {
         }}
       >
         <span className="font-['Inter_Tight'] font-medium text-[13px] lg:text-[14px] tracking-[-0.02em] uppercase">
-          PRMPT (R) 2026
+          ARABESQUE (R) 2026
         </span>
         <span className="font-['Inter_Tight'] font-medium text-[13px] lg:text-[14px] tracking-[-0.02em] uppercase">
           PRIVACY POLICY

@@ -138,7 +138,7 @@ const Iteams = () => {
     return (
       <div className="cart-page">
         <header className="cart-header">
-          <NavLink to="/" className="cart-brand">PRMPT ARCHIVE</NavLink>
+          <NavLink to="/" className="cart-brand">ARABESQUE</NavLink>
         </header>
         <main className="cart-main">
           <div className="success-box">
@@ -166,7 +166,7 @@ const Iteams = () => {
     return (
       <div className="cart-page">
         <header className="cart-header">
-          <NavLink to="/" className="cart-brand">PRMPT ARCHIVE</NavLink>
+          <NavLink to="/" className="cart-brand">ARABESQUE</NavLink>
           <nav className="cart-nav">
             <button className="cart-nav-back" onClick={() => setStep("cart")}>
               ← Back to Cart
@@ -434,7 +434,7 @@ const Iteams = () => {
   return (
     <div className="cart-page">
       <header className="cart-header">
-        <NavLink to="/" className="cart-brand">PRMPT ARCHIVE</NavLink>
+        <NavLink to="/" className="cart-brand">ARABESQUE</NavLink>
         <nav className="cart-nav">
           <NavLink to="/">Home</NavLink>
           <NavLink to="/products">Products</NavLink>

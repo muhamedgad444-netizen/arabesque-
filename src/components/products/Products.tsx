@@ -215,7 +215,7 @@ const Products: React.FC = () => {
       <div className="editorial-shell">
         <header className="frame-header">
           <NavLink to="/" className="brand-title">
-            PRMPT ARCHIVE
+            ARABESQUE
           </NavLink>
           <nav className="nav-links">
             <NavLink to="/">Home</NavLink>

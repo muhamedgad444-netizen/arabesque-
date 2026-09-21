@@ -112,7 +112,7 @@ export const GalleryPanel: React.FC<GalleryPanelProps> = ({
                   >
                     <img
                       src={GALLERY_IMAGES[cell.imageIndex]}
-                      alt={`prmpt archive product ${cell.imageIndex + 1}`}
+                      alt={`arabesque product ${cell.imageIndex + 1}`}
                       loading="eager"
                       className="absolute inset-0 w-full h-full object-cover object-center select-none pointer-events-none block"
                     />

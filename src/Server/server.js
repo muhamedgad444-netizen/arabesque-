@@ -150,7 +150,7 @@ async function saveOrderToDatabase(order) {
 async function sendOrderEmails(order) {
   if (!resendApiKey || resendApiKey.includes("...")) return;
 
-  const FROM = process.env.EMAIL_FROM || "Young Giza <onboarding@resend.dev>";
+  const FROM = process.env.EMAIL_FROM || "Arabesque <onboarding@resend.dev>";
   const currency = escapeHtml(order.currency || "EGP");
   const items = Array.isArray(order.items) ? order.items : [];
 
@@ -195,7 +195,7 @@ async function sendOrderEmails(order) {
           </div>
           ${itemsHtml ? `<h3 style="margin-bottom:4px;">Items</h3>${itemsHtml}` : ""}
           <hr style="border:none;border-top:1px solid #eee;margin:24px 0;" />
-          <p style="color:#999;font-size:12px;text-align:center;">Young Giza — Owner Notification</p>
+          <p style="color:#999;font-size:12px;text-align:center;">Arabesque — Owner Notification</p>
         </div>`,
     });
     console.log(`Owner notification → ${OWNER_EMAIL}`);
@@ -209,7 +209,7 @@ async function sendOrderEmails(order) {
     await resend.emails.send({
       from: FROM,
       to: [order.customerEmail],
-      subject: "Order Confirmed — Young Giza",
+      subject: "Order Confirmed — Arabesque",
       html: `
         <div style="font-family:Arial,sans-serif;max-width:600px;margin:0 auto;padding:24px;border:1px solid #e0e0e0;border-radius:8px;">
           <h1 style="color:#111;margin-bottom:8px;">Order Confirmed</h1>
@@ -225,7 +225,7 @@ async function sendOrderEmails(order) {
             We will contact you${order.customerPhone ? ` on <strong>${escapeHtml(order.customerPhone)}</strong>` : ""} regarding delivery.
           </p>
           <hr style="border:none;border-top:1px solid #eee;margin:24px 0;" />
-          <p style="color:#999;font-size:12px;text-align:center;">Young Giza Archive Collection</p>
+          <p style="color:#999;font-size:12px;text-align:center;">Arabesque</p>
         </div>`,
     });
     console.log(`Customer confirmation → ${order.customerEmail}`);
@@ -310,7 +310,7 @@ app.use(express.json());
 app.get("/", (req, res) => {
   res.json({
     status: "ok",
-    message: "Young Giza Server is running.",
+    message: "Arabesque Server is running.",
     stripe: Boolean(stripeSecret && !stripeSecret.includes("...")),
     resend: Boolean(resendApiKey && !resendApiKey.includes("...")),
     webhook: Boolean(webhookSecret && !webhookSecret.includes("...")),
@@ -426,7 +426,7 @@ app.get("/api/order-success", async (req, res) => {
 
 if (process.env.NODE_ENV !== 'production') {
   app.listen(PORT, "0.0.0.0", () => {
-    console.log(`Young Giza Server → http://localhost:${PORT}`);
+    console.log(`Arabesque Server → http://localhost:${PORT}`);
     console.log(`Supabase: ${supabase ? "connected" : "not configured"}`);
   });
 }
