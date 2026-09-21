@@ -343,7 +343,7 @@
 }
 .co-input:-webkit-autofill,
 .co-input:-webkit-autofill:focus {
-  -webkit-box-shadow: 0 0 0 1000px #111 inset;
+  -webkit-box-shadow: 0 0 0 1000px #fff inset;
   -webkit-text-fill-color: #000;
 }
 
