@@ -168,7 +168,9 @@ const Iteams = () => {
         <header className="cart-header">
           <NavLink to="/" className="cart-brand">ARABESQUE</NavLink>
           <nav className="cart-nav">
-            <button className="cart-nav-back" onClick={() => setStep("cart")}>
+            <NavLink to="/">Home</NavLink>
+            <NavLink to="/products">Products</NavLink>
+            <button className="cart-nav-back" onClick={() => setStep("cart")} style={{ background: 'none', border: 'none', cursor: 'pointer', fontFamily: 'inherit', fontSize: 'inherit', color: 'inherit', padding: 0 }}>
               ← Back to Cart
             </button>
           </nav>
