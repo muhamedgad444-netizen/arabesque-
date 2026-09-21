@@ -9,10 +9,11 @@ import dotenv from "dotenv";
 import path from "path";
 import { fileURLToPath } from "url";
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-dotenv.config({ path: path.join(__dirname, ".env") });
+if (process.env.NODE_ENV !== 'production') {
+  const __filename = fileURLToPath(import.meta.url);
+  const __dirname = path.dirname(__filename);
+  dotenv.config({ path: path.join(__dirname, ".env") });
+}
 dotenv.config();
 
 const stripeSecret  = process.env.STRIPE_SECRET_KEY || "";
@@ -36,7 +37,7 @@ if (!SUPABASE_URL || !SUPABASE_SECRET_KEY) warnings.push("SUPABASE_URL / SUPABAS
 if (warnings.length > 0) {
   console.warn("\n[SERVER NOTICE] Configuration warnings:");
   warnings.forEach((w) => console.warn(`   • ${w}`));
-  console.warn(`   → Edit: ${path.join(__dirname, ".env")}\n`);
+  console.warn(`   → Please configure environment variables in your deployment settings.\n`);
 }
 
 const stripe = new Stripe(stripeSecret || "dummy_key");

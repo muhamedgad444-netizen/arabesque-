@@ -19,56 +19,10 @@ export const HeaderNav: React.FC = () => {
         style={{ mixBlendMode: 'exclusion' }}
       >
         <NavLink to="/" className="pointer-events-auto block">
-          <svg
-            viewBox="0 0 355 110"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            className="w-full h-auto block"
-          >
-            <path
-              fillRule="evenodd"
-              clipRule="evenodd"
-              d="M8 22H52C67.464 22 80 34.536 80 50C80 65.464 67.464 78 52 78H32V104H8V22ZM32 58H50C54.4183 58 58 54.4183 58 50C58 45.5817 54.4183 42 50 42H32V58Z"
-              fill="white"
-            />
-            <path
-              d="M88 40H110V49.5C114.5 43.5 122 39.5 131 40V62C128.5 61.5 125.5 61.5 122.5 62C115 63 110 68 110 77V104H88V40Z"
-              fill="white"
-            />
-            <path
-              d="M138 40H159V49.2C163.5 43.2 170.8 39.5 179 39.5C187.5 39.5 194.2 43.8 197.8 50.8C203 43.5 210.8 39.5 220 39.5C234.5 39.5 244 48.8 244 64.5V104H222V68C222 59.5 217.5 56 211 56C204 56 199 61 199 70V104H177V68C177 59.5 172.5 56 166 56C159 56 154 61 154 70V104H138V40Z"
-              fill="white"
-            />
-            <path
-              fillRule="evenodd"
-              clipRule="evenodd"
-              d="M252 40H286C298.5 40 308 49.5 308 62C308 74.5 298.5 84 286 84H270V104H252V40ZM270 68H284C287.5 68 290 65.5 290 62C290 58.5 287.5 56 284 56H270V68Z"
-              fill="white"
-            />
-            <path
-              d="M316 26H334V40H346V56H334V85C334 89 336 91 340 91H346V104C343 104.5 338 105 332 105C320 105 316 97.5 316 86V56H308V40H316V26Z"
-              fill="white"
-            />
-            <circle
-              cx="345"
-              cy="15"
-              r="8"
-              stroke="white"
-              strokeWidth="1.75"
-              fill="none"
-            />
-            <text
-              x="345"
-              y="18.5"
-              fill="white"
-              fontSize="8.5"
-              fontFamily="Inter Tight, sans-serif"
-              fontWeight="600"
-              textAnchor="middle"
-            >
-              R
-            </text>
-          </svg>
+          <span className="font-['Inter_Tight'] font-bold text-[24px] sm:text-[32px] lg:text-[40px] tracking-[-0.04em] text-white">
+            ARABESQUE
+            <sup className="text-[10px] sm:text-[12px] ml-1 font-semibold border border-white rounded-full px-[3px] py-[1px] relative -top-3 sm:-top-4">R</sup>
+          </span>
         </NavLink>
       </motion.div>
 
