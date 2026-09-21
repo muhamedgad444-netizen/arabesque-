@@ -365,6 +365,65 @@ const Iteams = () => {
               <span>Total</span>
               <span>{totalEGP.toLocaleString()} EGP</span>
             </div>
+            
+            {/* Wallet widget moved to Checkout */}
+            <div className="app-container" style={{ paddingTop: '20px', paddingBottom: '20px' }}>
+              <div className="wallet">
+                <div className="wallet-back"></div>
+
+                <div className="card stripe-card" style={{ cursor: "pointer" }} onClick={handleSubmit}>
+                  <div className="card-inner">
+                    <div className="card-top"><span>Stripe (Click to Pay)</span><div className="chip"></div></div>
+                    <div className="card-bottom">
+                      <div className="card-info"><span className="label">Amount Due</span><span className="value">{totalEGP.toLocaleString()} EGP</span></div>
+                      <div className="card-number-wrapper"><span className="hidden-stars">**** 4242</span><span className="card-number">5524 9910 4242</span></div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="card instapay">
+                  <div className="card-inner">
+                    <div className="card-top"><span>InstaPay</span><div className="chip"></div></div>
+                    <div className="card-bottom">
+                      <div className="card-info"><span className="label">Phone</span><span className="value">012****7890</span></div>
+                      <div className="card-number-wrapper"><span className="hidden-stars">**** 1234</span><span className="card-number">INSTA PAY 1234</span></div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="card fawry">
+                  <div className="card-inner">
+                    <div className="card-top"><span>Fawry</span><div className="chip"></div></div>
+                    <div className="card-bottom">
+                      <div className="card-info"><span className="label">Ref Code</span><span className="value">993412</span></div>
+                      <div className="card-number-wrapper"><span className="hidden-stars">**** 9002</span><span className="card-number">FAWRY 9002</span></div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="pocket">
+                  <svg className="pocket-svg" viewBox="0 0 280 160" fill="none">
+                    <path d="M 0 20 C 0 10, 5 10, 10 10 C 20 10, 25 25, 40 25 L 240 25 C 255 25, 260 10, 270 10 C 275 10, 280 10, 280 20 L 280 120 C 280 155, 260 160, 240 160 L 40 160 C 20 160, 0 155, 0 120 Z" fill="#1e341e" />
+                    <path d="M 8 22 C 8 16, 12 16, 15 16 C 23 16, 27 29, 40 29 L 240 29 C 253 29, 257 16, 265 16 C 268 16, 272 16, 272 22 L 272 120 C 272 150, 255 152, 240 152 L 40 152 C 25 152, 8 152, 8 120 Z" stroke="#3d5635" strokeWidth="1.5" strokeDasharray="6 4" />
+                  </svg>
+                  <div className="pocket-content">
+                    <div style={{ position: "relative", height: "24px", width: "100%" }}>
+                      <div className="balance-stars">******</div>
+                      <div className="balance-real">{totalEGP.toLocaleString()} EGP</div>
+                    </div>
+                    <div style={{ color: "#698263", fontSize: "12px", fontWeight: 500 }}>Total Due</div>
+                    <div className="eye-icon-wrapper">
+                      <svg className="eye-icon eye-slash" width="20" height="20" viewBox="0 0 24 24" fill="none" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" /><circle cx="12" cy="12" r="3" /><line x1="3" y1="3" x2="21" y2="21" />
+                      </svg>
+                      <svg className="eye-icon eye-open" style={{ opacity: 0 }} width="20" height="20" viewBox="0 0 24 24" fill="none" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" /><circle cx="12" cy="12" r="3" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </aside>
         </main>
       </div>
@@ -428,64 +487,7 @@ const Iteams = () => {
               </div>
             </div>
 
-            {/* Wallet widget */}
-            <div className="app-container">
-              <div className="wallet">
-                <div className="wallet-back"></div>
 
-                <div className="card stripe-card" style={{ cursor: "pointer" }} onClick={() => setStep("checkout")}>
-                  <div className="card-inner">
-                    <div className="card-top"><span>Stripe (Click to Pay)</span><div className="chip"></div></div>
-                    <div className="card-bottom">
-                      <div className="card-info"><span className="label">Amount Due</span><span className="value">{totalEGP.toLocaleString()} EGP</span></div>
-                      <div className="card-number-wrapper"><span className="hidden-stars">**** 4242</span><span className="card-number">5524 9910 4242</span></div>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="card wise">
-                  <div className="card-inner">
-                    <div className="card-top"><span>Wise</span><div className="chip"></div></div>
-                    <div className="card-bottom">
-                      <div className="card-info"><span className="label">Business</span><span className="value">STUDIO LLC</span></div>
-                      <div className="card-number-wrapper"><span className="hidden-stars">**** 8810</span><span className="card-number">9012 4432 8810</span></div>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="card paypal">
-                  <div className="card-inner">
-                    <div className="card-top"><span>Pay<b style={{ color: "#0079C1" }}>Pal</b></span><div className="chip"></div></div>
-                    <div className="card-bottom">
-                      <div className="card-info"><span className="label">Email</span><span className="value">hello@work.com</span></div>
-                      <div className="card-number-wrapper"><span className="hidden-stars">**** 0094</span><span className="card-number">3312 0045 0094</span></div>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="pocket">
-                  <svg className="pocket-svg" viewBox="0 0 280 160" fill="none">
-                    <path d="M 0 20 C 0 10, 5 10, 10 10 C 20 10, 25 25, 40 25 L 240 25 C 255 25, 260 10, 270 10 C 275 10, 280 10, 280 20 L 280 120 C 280 155, 260 160, 240 160 L 40 160 C 20 160, 0 155, 0 120 Z" fill="#1e341e" />
-                    <path d="M 8 22 C 8 16, 12 16, 15 16 C 23 16, 27 29, 40 29 L 240 29 C 253 29, 257 16, 265 16 C 268 16, 272 16, 272 22 L 272 120 C 272 150, 255 152, 240 152 L 40 152 C 25 152, 8 152, 8 120 Z" stroke="#3d5635" strokeWidth="1.5" strokeDasharray="6 4" />
-                  </svg>
-                  <div className="pocket-content">
-                    <div style={{ position: "relative", height: "24px", width: "100%" }}>
-                      <div className="balance-stars">******</div>
-                      <div className="balance-real">{totalEGP.toLocaleString()} EGP</div>
-                    </div>
-                    <div style={{ color: "#698263", fontSize: "12px", fontWeight: 500 }}>Total Due</div>
-                    <div className="eye-icon-wrapper">
-                      <svg className="eye-icon eye-slash" width="20" height="20" viewBox="0 0 24 24" fill="none" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" /><circle cx="12" cy="12" r="3" /><line x1="3" y1="3" x2="21" y2="21" />
-                      </svg>
-                      <svg className="eye-icon eye-open" style={{ opacity: 0 }} width="20" height="20" viewBox="0 0 24 24" fill="none" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" /><circle cx="12" cy="12" r="3" />
-                      </svg>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
           </>
         )}
       </main>

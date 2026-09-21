@@ -687,10 +687,10 @@
 .card-number  { display:none; font-size:14px; letter-spacing:1px; font-family:monospace; }
 
 .stripe-card { background:#635bff; bottom:90px; z-index:10; animation-delay:.1s; }
-.wise        { background:#9bd86a; bottom:65px; z-index:20; animation-delay:.2s; }
-.paypal      { background:#ffffff; color:#003087; bottom:40px; z-index:30; animation-delay:.3s; }
-.paypal .chip  { background:rgba(0,0,0,.05); }
-.paypal .label { color:#8c979d; }
+.instapay    { background:#7A28CB; bottom:65px; z-index:20; animation-delay:.2s; }
+.fawry       { background:#FFCC00; color:#000000; bottom:40px; z-index:30; animation-delay:.3s; }
+.fawry .chip { background:rgba(0,0,0,.15); }
+.fawry .label{ color:#333333; }
 
 .pocket {
   position:absolute; bottom:0; width:280px; height:160px; z-index:40;
@@ -712,12 +712,12 @@
 .wallet:hover                  { transform:translateY(-5px); }
 .wallet:hover .eye-icon-wrapper { opacity:1; }
 .wallet:hover .stripe-card     { transform:translateY(-75px) rotate(-3deg); }
-.wallet:hover .wise            { transform:translateY(-45px) rotate(2deg); }
-.wallet:hover .paypal          { transform:translateY(-10px); }
+.wallet:hover .instapay        { transform:translateY(-45px) rotate(2deg); }
+.wallet:hover .fawry           { transform:translateY(-10px); }
 .card:hover                    { z-index:100 !important; transition-delay:0s !important; }
 .wallet:hover .stripe-card:hover { transform:translateY(-60px) scale(1.05) rotate(0); }
-.wallet:hover .wise:hover        { transform:translateY(-70px) scale(1.05) rotate(0); }
-.wallet:hover .paypal:hover      { transform:translateY(-60px) scale(1.05) rotate(0); }
+.wallet:hover .instapay:hover    { transform:translateY(-70px) scale(1.05) rotate(0); }
+.wallet:hover .fawry:hover       { transform:translateY(-60px) scale(1.05) rotate(0); }
 .card:hover .hidden-stars { display:none; }
 .card:hover .card-number  { display:block; }
 .wallet:hover .balance-stars { opacity:0; }
